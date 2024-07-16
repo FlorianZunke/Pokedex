@@ -8,6 +8,7 @@
 
     <link rel="icon" href="./assets/icons/pokemon-fav.png">
 
+    <link rel="stylesheet" href="./styles/colors.css">
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/font.css">
     <link rel="stylesheet" href="./styles/display.css">
@@ -19,19 +20,21 @@
     <script src="script.js"></script>
 </head>
 
-<body>
+<body onload="fetchPokemon()">
     <header class="d-flex-ac">
         <img class="header-img" src="./assets/img/header_img.png" alt="">
         <h1>Pokedex</h1>
     </header>
 
-    <section class="d-flex-c-c">
-        <div class="pkm-card">
+    <section id="pokemon-card" class="d-flex-c-c">
+        <div  class="pkm-card">
             <div class="d-flex-bw-c">
                 <p>ID</p>
                 <div>Typ Color</div>
             </div>
-            <img src="" alt="pokemon bild">
+            <div class=" pkm-img">
+                <img src="" alt="pokemon bild">
+            </div>
             <h2 class="txt-center">Pokemon-name</h2>
             <div class="d-flex-even-c">
                 <div class="d-clm">

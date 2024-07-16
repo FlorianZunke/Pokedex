@@ -7,7 +7,21 @@
 .pkm-card {
     height: 500px;
     width: 300px;
-    background-color: rgba(29,29,29);
-    border: 1px solid green;
+    background: #434242;
+    background: -moz-linear-gradient(top, #434242 0%, #404040 32%, #272727 100%);
+    background: -webkit-linear-gradient(top, #434242 0%, #404040 32%, #272727 100%);
+    background: linear-gradient(to bottom, #434242 0%, #404040 22%, #272727 100%);
     border-radius: 10px;
+}
+
+.bg-behind-pkm-img {
+    background: #A7A7A7;
+    background: -moz-radial-gradient(center, #A7A7A7 0%, #424242 42%, #424242 100%);
+    background: -webkit-radial-gradient(center, #A7A7A7 0%, #424242 42%, #424242 100%);
+    background: radial-gradient(ellipse at center, #A7A7A7 0%, #424242 42%, #424242 100%);
+}
+
+.pkm-img {
+    height: 275px;
+    width: 100%;
 }
