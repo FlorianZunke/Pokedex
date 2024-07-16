@@ -71,3 +71,6 @@
     justify-content: center;
 }
 
+.d-wrap {
+    flex-wrap: wrap;
+}

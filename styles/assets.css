@@ -1,7 +1,7 @@
 .header-img {
     height: 120px;
     width: 120px;
-    background-color: rgb(27, 25, 32);
+    object-fit: cover;
 }
 
 .pkm-card {
@@ -22,6 +22,11 @@
 }
 
 .pkm-img {
+    height: 250px;
+    width: 250px;
+}
+
+.pkm-img-container {
     height: 275px;
     width: 100%;
 }

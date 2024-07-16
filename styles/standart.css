@@ -9,3 +9,7 @@ button {
 .txt-center {
     text-align: center;
 }
+
+.gap {
+    gap: 16px;
+}
