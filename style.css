@@ -3,3 +3,8 @@
     margin: 0;
     scroll-behavior: smooth;
 }
+
+body {
+    background-color: rgb(27, 25, 32);
+    color: white;
+}

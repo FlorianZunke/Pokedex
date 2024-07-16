@@ -1,4 +1,13 @@
 .header-img {
     height: 120px;
     width: 120px;
+    background-color: rgb(27, 25, 32);
+}
+
+.pkm-card {
+    height: 500px;
+    width: 300px;
+    background-color: rgba(29,29,29);
+    border: 1px solid green;
+    border-radius: 10px;
 }
