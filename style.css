@@ -5,6 +5,44 @@
 }
 
 body {
-    background-color: rgb(27, 25, 32);
+    background-color: rgb(50, 48, 56);
     color: white;
+}
+
+.header-img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.pkm-card {
+    height: 450px;
+    width: 275px;
+    background: #434242;
+    background: -moz-linear-gradient(top, #434242 0%, #404040 32%, #272727 100%);
+    background: -webkit-linear-gradient(top, #434242 0%, #404040 32%, #272727 100%);
+    background: linear-gradient(to bottom, #434242 0%, #404040 22%, #272727 100%);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bg-behind-pkm-img {
+    background: #A7A7A7;
+    background: -moz-radial-gradient(center, #A7A7A7 0%, #424242 42%, #424242 100%);
+    background: -webkit-radial-gradient(center, #A7A7A7 0%, #424242 42%, #424242 100%);
+    background: radial-gradient(ellipse at center, #A7A7A7 0%, #424242 42%, #424242 100%);
+}
+
+.pkm-img {
+    height: 175px;
+    width: 175px;
+}
+
+.pkm-img-container {
+    background: linear-gradient(to bottom, rgba(214, 214, 214, 0.3), rgba(77, 77, 77, 0.1));
+    box-shadow: 0 0 10px 10px rgba(202, 201, 201, 0.05);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
 }

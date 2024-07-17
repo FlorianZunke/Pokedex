@@ -1,48 +1,76 @@
 .bg-grass {
-    border: 1px solid green;
+    border: 3px solid #7AC74C;
 }
 
 .bg-fire {
-    border: 1px solid red;
+    border: 3px solid #f04c1a;
 }
 
 .bg-poison {
-    border: 1px solid rgb(109, 7, 70);
+    border: 3px solid #A33EA1;
 }
 
 .bg-water {
-    border: 1px solid rgb(7, 78, 231);
+    border: 3px solid #6390F0;
 }
 
-.bg- {
-    border: 1px solid red;
+.bg-bug {
+    border: 3px solid #A6B91A;
 }
 
-.bg-fire {
-    border: 1px solid red;
+.bg-flying {
+    border: 3px solid #A98FF3;
 }
 
-.bg-fire {
-    border: 1px solid red;
+.bg-normal {
+    border: 3px solid #A8A77A;
 }
 
-.bg-fire {
-    border: 1px solid red;
+.bg-electric {
+    border: 3px solid #F7D02C;
 }
 
-.bg-fire {
-    border: 1px solid red;
+.bg-ground {
+    border: 3px solid #E2BF65;
 }
 
-.bg-fire {
-    border: 1px solid red;
+.bg-fairy {
+    border: 3px solid #D685AD;
 }
 
-.bg-fire {
-    border: 1px solid red;
+.bg-fighting {
+    border: 3px solid #b32b26cc;
 }
 
-.bg-fire {
-    border: 1px solid red;
+.bg-psychic {
+    border: 3px solid #F95587;
 }
+
+.bg-rock {
+    border: 3px solid #B6A136;
+}
+
+.bg-steel {
+    border: 3px solid #B7B7CE;
+}
+
+.bg-ice {
+    border: 3px solid rgb(0, 204, 255);
+}
+
+.bg-ghost {
+    border: 3px solid #735797;
+}
+
+.bg-dragon {
+    border: 3px solid #6F35FC;
+}
+
+.bg-dark {
+    border: 3px solid #70574670;
+}
+
+
+
+
 
