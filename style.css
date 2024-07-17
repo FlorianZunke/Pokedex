@@ -10,9 +10,14 @@ body {
 }
 
 .header-img {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     object-fit: cover;
+}
+
+.header {
+    height: 100px;
+    margin-bottom: 8px;
 }
 
 .pkm-card {

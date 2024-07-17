@@ -2,6 +2,11 @@ const BASE_URL = "https://pokeapi.co/api/v2/";
 let allPokemons = [];
 
 
+function init(params) {
+    fetchPokemon(path = "pokemon?limit=10&offset=0")
+    fetchPokemonStats(path = "pokemon/")
+}
+
 async function fetchPokemon(path = "pokemon?limit=10&offset=0") {
     let response = await fetch(BASE_URL + path);
     let responseToJson = await response.json();
@@ -14,9 +19,11 @@ async function fetchPokemon(path = "pokemon?limit=10&offset=0") {
             type: pokemonData.types.map(type => type.type.name),
             height: pokemonData.height,
             weight: pokemonData.weight,
+            stats: pokemonData.stats.map(stat => stat.base_stat),
         }
     }))
     renderPokemonCard();
+    console.log(allPokemons);
 }
 
 
@@ -27,6 +34,19 @@ async function fetchPokemonData(url) {
 }
 
 
+async function fetchPokemonStats(path = "pokemon/") {
+    let response = await fetch(BASE_URL + path);
+    let responseToJson = await response.json();
+    pokemonStats = await Promise.all(responseToJson.results.map(async (result) => {
+        const pokemonStatsData = await fetchPokemonData(result.url);
+        return {
+            stats: pokemonStatsData.stats.map(stat => stat.base_stat),
+        }
+    }))
+
+}
+
+
 function renderPokemonCard() {
     let pokemonCard = document.getElementById('pokemon_card');
     pokemonCard.innerHTML = '';
@@ -34,89 +54,65 @@ function renderPokemonCard() {
     for (let i = 0; i < allPokemons.length; i++) {
         let firstType = allPokemons[i].type[0];
         let weightInKg = (allPokemons[i].weight * 0.1).toFixed(1);
+
         weightInKg = weightInKg.endsWith('.0') ? weightInKg.slice(0, -2) : weightInKg;
-        pokemonCard.innerHTML += `
-        <div onclick="openBigPokemonCard(${i})" class="pkm-card bg-${firstType}">
-            <div class="d-flex-bw-c margin-8">
-                <p>#${allPokemons[i].id}</p>
-                <div>Typ Color</div>
-            </div>
-            <div class="d-flex-clm-c m-t-32">
-                <div class="pkm-img-container d-flex-c-c">
-                    <img class="pkm-img" src="${allPokemons[i].image}" alt="pokemon bild">
-                </div>
-                <div>
-                    <h2 class="txt-center">${allPokemons[i].name}</h2>
-                    <div class="d-flex-c-c m-t-32 m-b-32 gap">
-                        <div class="d-flex-clm-c">
-                            <span>Height</span>
-                            <span>${((allPokemons[i].height) / 10)}m</span>
-                        </div>
-                        <div class="d-flex-clm-c">
-                            <span>weight</span>
-                            <span>${weightInKg}kg</span>
-                        </div>
-                    </div>
-                    <h3 class="txt-center">Type: <b>${allPokemons[i].type.join(', ')}</b></h3>
-                </div>
-            </div>
-        </div>
-        `;
+        pokemonCard.innerHTML += getAllPokemonHTML(i, firstType, weightInKg);
     }
 }
 
 
-function openBigPokemonCard(pokemon) {
-    let CardRef = document.getElementById(`big_pokemon_card`);
+function renderBigPokemonCard(pokemon) {
+    let cardRef = document.getElementById(`big_pokemon_card`);
     let firstType = allPokemons[pokemon].type[0];
     let weightInKg = (allPokemons[pokemon].weight * 0.1).toFixed(1);
     weightInKg = weightInKg.endsWith('.0') ? weightInKg.slice(0, -2) : weightInKg;
-    CardRef.innerHTML = '';
-    CardRef.innerHTML = getBigPokemonCardHTML(pokemon, firstType, weightInKg);
-    CardRef.classList.add(`pkm-card-overlay`);
-    CardRef.classList.remove('d-none')
+
+    cardRef.innerHTML = '';
+    cardRef.innerHTML = getBigPokemonCardHTML(pokemon, firstType, weightInKg);
+}
+
+
+function renderPokemonStatsToBigCard(i) {
+    let pokemonStatsContainer = document.getElementById('pokemon_stats');
+    let hp = allPokemons[i].stats[0];
+    let attack = allPokemons[i].stats[1];
+    let defense = allPokemons[i].stats[2];
+    let spezial_attack = allPokemons[i].stats[3];
+    let spezial_defense = allPokemons[i].stats[4];
+    let speed = allPokemons[i].stats[5];
+
+    pokemonStatsContainer.innerHTML = '';
+    pokemonStatsContainer.innerHTML += getPokemonStatsHTML(hp, attack, defense, spezial_attack, spezial_defense, speed);
+}
+
+
+function openBigPokemonCard(pokemon) {
+    let overflowContainer = document.getElementById(`overflow_container`);
+    let cardRef = document.getElementById(`big_pokemon_card`);
+
+    cardRef.classList.add(`pkm-card-overlay`);
+    overflowContainer.classList.add(`overflow-hidden`);
+    cardRef.classList.remove('d-none');
+
+    renderBigPokemonCard(pokemon);
+    renderPokemonStatsToBigCard(pokemon);
 }
 
 
 function closeBigPokemonCard() {
     let CardRef = document.getElementById(`big_pokemon_card`);
+    let overflowContainer = document.getElementById(`overflow_container`);
+
     CardRef.innerHTML = '';
     CardRef.classList.remove(`pkm-card-overlay`);
-    CardRef.classList.add('d-none')
+    overflowContainer.classList.remove(`overflow-hidden`);
+    CardRef.classList.add('d-none');
+
     renderPokemonCard();
-    
 }
 
 
-function getBigPokemonCardHTML(pokemon, firstType, weightInKg) {
-    return `
-    <div class="pkm-card bg-${firstType}">
-        <div class="d-flex-bw-c margin-8">
-            <p>#${allPokemons[pokemon].id}</p>
-            <div>Typ Color</div>
-        </div>
-        <div class="d-flex-clm-c m-t-32">
-            <div class="pkm-img-container d-flex-c-c">
-                <img class="pkm-img" src="${allPokemons[pokemon].image}" alt="pokemon bild">
-            </div>
-            <div>
-                <h2 class="txt-center">${allPokemons[pokemon].name}</h2>
-                <div class="d-flex-c-c m-t-32 m-b-32 gap">
-                    <div class="d-flex-clm-c">
-                        <span>Height</span>
-                        <span>${((allPokemons[pokemon].height) / 10)}m</span>
-                    </div>
-                    <div class="d-flex-clm-c">
-                        <span>weight</span>
-                        <span>${weightInKg}kg</span>
-                    </div>
-                </div>
-                <h3 class="txt-center">Type: <b>${allPokemons[pokemon].type.join(', ')}</b></h3>
-            </div>
-        </div>
-    </div>
-    `;
-}
+
 
 
 

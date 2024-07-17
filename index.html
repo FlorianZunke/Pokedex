@@ -20,8 +20,8 @@
     <script src="script.js"></script>
 </head>
 
-<body onload="fetchPokemon()">
-    <header class="d-flex-even-c m-b-32">
+<body id="overflow_container" onload="init()">
+    <header class="d-flex-even-c header">
         <img class="header-img" src="./assets/img/header-img.png" alt="">
         <div></div>
         <h1>Pokedex</h1>
@@ -32,6 +32,8 @@
     <button id="load_btn" class="d-none">Load More</button>
 
     <section onclick="closeBigPokemonCard()" id="big_pokemon_card" class="d-flex-c-c gap d-wrap d-none"></section>
+
+
 </body>
 
 </html>
