@@ -10,6 +10,10 @@ button {
     font-size: 18px;
 }
 
+button:disabled {
+    display: none;
+}
+
 input {
     padding: 8px 16px;
     border-radius: 4px;
@@ -20,11 +24,19 @@ input {
 }
 
 .section-pad {
-    padding: 16px 32px;
+    padding: 0px 16px;
 }
 
-.gap {
+.gap32 {
     gap: 32px;
+}
+
+.gap16 {
+    gap: 16px;
+}
+
+.gap8 {
+    gap: 8px;
 }
 
 .m-t-32 {
@@ -35,6 +47,22 @@ input {
     margin-bottom: 32px;
 }
 
+.m-t-16 {
+    margin-top: 16px;
+}
+
+.m-b-16 {
+    margin-bottom: 16px;
+}
+
 .margin-8 {
     margin: 8px;
+}
+
+@media (max-width: 500px){
+    input {
+        padding: 4px 8px;
+        border-radius: 4px;
+        width: 110px;
+    }
 }

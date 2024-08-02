@@ -25,15 +25,20 @@
         <img class="header-img" src="./assets/img/header-img.png" alt="">
         <div></div>
         <h1>Pokedex</h1>
-        <input type="text" placeholder="Pokesearch" id="">
+        <input oninput="filterPokemon()" type="search" placeholder="Pokesearch" id="search_input">
     </header>
 
-    <section id="pokemon_card" class="d-flex-c-c gap d-wrap"></section>
-    <button id="load_btn" class="d-none">Load More</button>
+    <section id="loading_spinner" class="d-flex-c-c d-clm loading-spinner-container">
+        <img class="pokeball margin-8" src="./assets/img/loading-spinner.png" alt="">
+        <span class="margin-8">...loading</span>
+    </section>
 
-    <section onclick="closeBigPokemonCard()" id="big_pokemon_card" class="d-flex-c-c gap d-wrap d-none"></section>
+    <section id="pokemon_card" class="d-flex-c-c gap32 d-wrap section-pad"></section>
+    <section class="d-flex-c-c m-t-32 m-b-32"><button onclick="loadMorePkm()" id="load_btn">Load More</button></section>
 
+    <section onclick="closeBigPokemonCard()" id="big_pokemon_card" class="d-flex-c-c gap16 d-wrap d-none"></section>
 
+    <footer></footer>
 </body>
 
 </html>

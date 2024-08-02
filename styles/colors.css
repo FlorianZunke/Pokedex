@@ -1,71 +1,147 @@
+/*Border-colors*/
+
+.b-grass {
+    border: 2px solid #7AC74C;
+}
+
+.b-fire {
+    border: 2px solid #f04c1a;
+}
+
+.b-poison {
+    border: 2px solid #A33EA1;
+}
+
+.b-water {
+    border: 2px solid #6390F0;
+}
+
+.b-bug {
+    border: 2px solid #A6B91A;
+}
+
+.b-flying {
+    border: 2px solid #A98FF3;
+}
+
+.b-normal {
+    border: 2px solid #A8A77A;
+}
+
+.b-electric {
+    border: 2px solid #F7D02C;
+}
+
+.b-ground {
+    border: 2px solid #E2BF65;
+}
+
+.b-fairy {
+    border: 2px solid #D685AD;
+}
+
+.b-fighting {
+    border: 2px solid #b32b26cc;
+}
+
+.b-psychic {
+    border: 2px solid #F95587;
+}
+
+.b-rock {
+    border: 2px solid #B6A136;
+}
+
+.b-steel {
+    border: 2px solid #B7B7CE;
+}
+
+.b-ice {
+    border: 2px solid rgb(0, 204, 255);
+}
+
+.b-ghost {
+    border: 2px solid #735797;
+}
+
+.b-dragon {
+    border: 2px solid #6F35FC;
+}
+
+.b-dark {
+    border: 2px solid #70574670;
+}
+
+
+/* background-colors */
 .bg-grass {
-    border: 3px solid #7AC74C;
+    background-color:  #7AC74C;
 }
 
 .bg-fire {
-    border: 3px solid #f04c1a;
+    background-color: #f04c1a;
 }
 
 .bg-poison {
-    border: 3px solid #A33EA1;
+    background-color: #A33EA1;
 }
 
 .bg-water {
-    border: 3px solid #6390F0;
+    background-color: #6390F0;
 }
 
 .bg-bug {
-    border: 3px solid #A6B91A;
+    background-color: #A6B91A;
 }
 
 .bg-flying {
-    border: 3px solid #A98FF3;
+    background-color: #A98FF3;
 }
 
 .bg-normal {
-    border: 3px solid #A8A77A;
+    background-color: #A8A77A;
 }
 
 .bg-electric {
-    border: 3px solid #F7D02C;
+    background-color: #F7D02C;
 }
 
 .bg-ground {
-    border: 3px solid #E2BF65;
+    background-color: #E2BF65;
 }
 
 .bg-fairy {
-    border: 3px solid #D685AD;
+    background-color: #D685AD;
 }
 
 .bg-fighting {
-    border: 3px solid #b32b26cc;
+    background-color: #b32b26cc;
 }
 
 .bg-psychic {
-    border: 3px solid #F95587;
+    background-color: #F95587;
 }
 
 .bg-rock {
-    border: 3px solid #B6A136;
+    background-color: #B6A136;
 }
 
 .bg-steel {
-    border: 3px solid #B7B7CE;
+    background-color: #B7B7CE;
 }
 
 .bg-ice {
-    border: 3px solid rgb(0, 204, 255);
+    background-color: rgb(0, 204, 255);
 }
 
 .bg-ghost {
-    border: 3px solid #735797;
+    background-color: #735797;
 }
 
 .bg-dragon {
-    border: 3px solid #6F35FC;
+    background-color: #6F35FC;
 }
 
 .bg-dark {
-    border: 3px solid #70574670;
+    background-color: #70574670;
 }

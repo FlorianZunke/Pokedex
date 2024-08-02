@@ -5,14 +5,92 @@
 .pkm-card-overlay {
     height: 100vh;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #00000066;
     scale: 1.4;
 }
 
+.detail-info-container {
+    height: 450px;
+}
+
 .stats-container {
-    height: 225px;
+    height: auto;
+    background-color: #434242;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.evolves-container {
+    height: auto;
+    background-color: #434242;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.next-pkm-btn {
+    height: 50px;
+    width: 50px;
+    z-index: 10;
+}
+
+.prev-pkm-btn {
+    height: 50px;
+    width: 50px;
+    z-index: 10;
+}
+
+.loading-spinner-container {
+    height: calc(100vh - 108px - 64px);
+}
+
+.big-card-buttons {
+    padding: 4px 8px;
+    background-color: rgb(0,123,255);
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.pokeball {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(50, 48, 56);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #424bc4;
+}
+
+@media (max-width: 830px) {
+    .pkm-card-overlay {
+        scale: 1;
+    }
 }

@@ -18,10 +18,13 @@ body {
 .header {
     height: 100px;
     margin-bottom: 8px;
+    position: sticky;
+    top: 0;
+    background-color: rgb(50, 48, 56);
 }
 
 .pkm-card {
-    height: 450px;
+    height: auto;
     width: 275px;
     background: #434242;
     background: -moz-linear-gradient(top, #434242 0%, #404040 32%, #272727 100%);
@@ -49,4 +52,22 @@ body {
     width: 200px;
     height: 200px;
     text-align: center;
+}
+
+.pkm-card:hover {
+    -webkit-box-shadow: inset 0px 0px 40px 8px rgba(245,245,245,0.74); 
+    box-shadow: inset 0px 0px 40px 8px rgba(245,245,245,0.74);
+}
+
+.pkm-card:hover .pkm-img {
+     height: 250px;
+    width: 250px;
+}
+
+@media (max-width: 500px) {
+    .header-img {
+        height: 60px;
+        width: 60px;
+        object-fit: cover;
+    }
 }
