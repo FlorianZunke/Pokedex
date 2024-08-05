@@ -10,7 +10,7 @@
     left: 0;
     right: 0;
     background-color: #00000066;
-    scale: 1.4;
+    scale: 1.2;
 }
 
 .detail-info-container {
@@ -18,17 +18,13 @@
 }
 
 .stats-container {
-    height: auto;
-    background-color: #434242;
+    height: 200px;
     width: 100%;
-    border-radius: 10px;
 }
 
-.evolves-container {
-    height: auto;
-    background-color: #434242;
+.info-pokemon {
+    height: 200px;
     width: 100%;
-    border-radius: 10px;
 }
 
 .next-pkm-btn {
@@ -49,8 +45,7 @@
 
 .big-card-buttons {
     padding: 4px 8px;
-    background-color: rgb(0,123,255);
-    color: white;
+    color: black;
     border-radius: 4px;
     font-size: 14px;
 }

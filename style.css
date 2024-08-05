@@ -33,6 +33,20 @@ body {
     border-radius: 10px;
 }
 
+.big-pokemon-card {
+    height: auto;
+    width: 335px;
+    background: #434242;
+    background: -moz-linear-gradient(top, #434242 0%, #404040 32%, #272727 100%);
+    background: -webkit-linear-gradient(top, #434242 0%, #404040 32%, #272727 100%);
+    background: linear-gradient(to bottom, #434242 0%, #404040 22%, #272727 100%);
+    border-radius: 10px;
+}
+
+.pkm-card-hover {
+    height: auto;
+}
+
 .bg-behind-pkm-img {
     background: #A7A7A7;
     background: -moz-radial-gradient(center, #A7A7A7 0%, #424242 42%, #424242 100%);
@@ -54,14 +68,14 @@ body {
     text-align: center;
 }
 
-.pkm-card:hover {
+.pkm-card-hover:hover {
     -webkit-box-shadow: inset 0px 0px 40px 8px rgba(245,245,245,0.74); 
     box-shadow: inset 0px 0px 40px 8px rgba(245,245,245,0.74);
 }
 
-.pkm-card:hover .pkm-img {
-     height: 250px;
-    width: 250px;
+.pkm-card-hover:hover .pkm-img {
+    height: 210px;
+    width: 210px;
 }
 
 @media (max-width: 500px) {
@@ -70,4 +84,11 @@ body {
         width: 60px;
         object-fit: cover;
     }
+}
+
+@media (max-width: 400px) {
+    .big-pokemon-card {
+        width: 275px;
+    }
+    
 }

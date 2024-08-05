@@ -10,6 +10,14 @@ button {
     font-size: 18px;
 }
 
+.width100 {
+    width: 100%;
+}
+
+.border-radius {
+    border-radius: 10px;
+}
+
 button:disabled {
     display: none;
 }
