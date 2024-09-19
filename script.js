@@ -1,15 +1,14 @@
 const BASE_URL = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
 
 let allPokemons = [];
+let filtertPokemons = [];
 let currentOffset = 0;
 let pokemonPerPage = 25;
-let filtertPokemons = [];
 let isFiltert = false;
 
 
 async function loadAndShowPkm() {
     showLoadingSpinner();
-
     await fetchPokemon();
     hiddeLoadingSpinner();
     renderPokemonCard();

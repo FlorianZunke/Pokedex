@@ -74,3 +74,13 @@ input {
         width: 110px;
     }
 }
+
+@media (max-width: 800px){
+    .m-t-32 {
+        margin-top: 16px;
+    }
+    
+    .m-b-32 {
+        margin-bottom: 16px;
+    }
+}
